@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="262.0" prefWidth="532.0" stylesheets="@default.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.cs3733.d22.teamY.views.popups.API">
+   <children>
+      <MFXButton fx:id="exitButton" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="68.0" stylesheets="@default.css" text="Exit" />
+      <Label layoutX="156.0" layoutY="15.0" prefHeight="29.0" prefWidth="128.0" stylesheets="@default.css" text="Location ID">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="156.0" layoutY="54.0" stylesheets="@default.css" text="Priority">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="156.0" layoutY="90.0" stylesheets="@default.css" text="Status">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="156.0" layoutY="125.0" stylesheets="@default.css" text="Assigned Employee">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="156.0" layoutY="169.0" stylesheets="@default.css" text="Additional Notes">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="locationField" layoutX="358.0" layoutY="17.0" stylesheets="@default.css" />
+      <TextField fx:id="employeeField" layoutX="358.0" layoutY="131.0" stylesheets="@default.css" />
+      <TextArea fx:id="notesField" layoutX="355.0" layoutY="169.0" prefHeight="63.0" prefWidth="160.0" stylesheets="@default.css" />
+      <MFXButton fx:id="addButton" layoutX="29.0" layoutY="216.0" onAction="#addValues" stylesheets="@default.css" text="Add" />
+      <JFXComboBox fx:id="priorityPick" layoutX="358.0" layoutY="56.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
+      <JFXComboBox fx:id="statusPick" layoutX="358.0" layoutY="92.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
+   </children>
+</AnchorPane>

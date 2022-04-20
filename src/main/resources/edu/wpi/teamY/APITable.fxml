@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/default.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.cs3733.d22.teamY.views.popups.APITable">
+   <children>
+      <TableView fx:id="serviceTable" layoutX="205.0" layoutY="24.0" prefHeight="350.0" prefWidth="378.0" stylesheets="@../css/default.css">
+         <columns>
+            <TableColumn fx:id="location" prefWidth="75.0" text="Location" />
+            <TableColumn fx:id="priority" prefWidth="75.0" text="Priority" />
+            <TableColumn fx:id="status" prefWidth="75.0" text="Status" />
+            <TableColumn fx:id="employee" prefWidth="75.0" text="Employee" />
+            <TableColumn fx:id="notes" prefWidth="75.0" text="Notes" />
+         </columns>
+      </TableView>
+      <MFXButton fx:id="addButton" layoutX="14.0" layoutY="347.0" onAction="#addNewButton" stylesheets="@../css/default.css" text="Add" />
+      <MFXButton fx:id="deleteButton" layoutX="71.0" layoutY="348.0" onAction="#deleteCell" stylesheets="@../css/default.css" text="Delete" />
+      <MFXButton fx:id="modifyButton" layoutX="138.0" layoutY="349.0" onAction="#modifyCell" stylesheets="@../css/default.css" text="Modify" />
+      <MFXButton layoutX="26.0" layoutY="24.0" stylesheets="@../css/default.css" text="Exit" />
+   </children>
+</AnchorPane>
