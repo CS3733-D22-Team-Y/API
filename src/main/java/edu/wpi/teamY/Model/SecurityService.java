@@ -1,6 +1,14 @@
 package edu.wpi.teamY.Model;
 
-public class SecurityService {
+import javax.persistence.*;
+
+@Entity
+@Table(name = "SecurityService")
+public class SecurityService implements StringArrayConv {
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  int id;
+
   String nodeID;
   String priority;
   String status;
@@ -61,4 +69,12 @@ public class SecurityService {
   public void setAdditionalNotes(String additionalNotes) {
     this.additionalNotes = additionalNotes;
   }
+
+  @Override
+  public String[] toStringArray() {
+    return new String[0];
+  }
+
+  @Override
+  public void fromStringArray(String[] args) {}
 }
