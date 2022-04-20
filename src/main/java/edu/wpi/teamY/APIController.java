@@ -1,4 +1,4 @@
-package edu.wpi.cs3733.d22.teamY.controllers;
+package edu.wpi.teamY;
 
 import com.jfoenix.controls.JFXComboBox;
 import io.github.palexdev.materialfx.controls.MFXButton;

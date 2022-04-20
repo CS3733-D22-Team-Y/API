@@ -5,7 +5,6 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/default.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.cs3733.d22.teamY.views.popups.APITable">
    <children>
       <TableView fx:id="serviceTable" layoutX="205.0" layoutY="24.0" prefHeight="350.0" prefWidth="378.0" stylesheets="@../css/default.css">
@@ -18,8 +17,8 @@
          </columns>
       </TableView>
       <MFXButton fx:id="addButton" layoutX="14.0" layoutY="347.0" onAction="#addNewButton" stylesheets="@../css/default.css" text="Add" />
-      <MFXButton fx:id="deleteButton" layoutX="71.0" layoutY="348.0" stylesheets="@../css/default.css" text="Delete" />
-      <MFXButton fx:id="modifyButton" layoutX="138.0" layoutY="349.0" stylesheets="@../css/default.css" text="Modify" />
+      <MFXButton fx:id="deleteButton" layoutX="71.0" layoutY="348.0" onAction="#deleteCell" stylesheets="@../css/default.css" text="Delete" />
+      <MFXButton fx:id="modifyButton" layoutX="138.0" layoutY="349.0" onAction="#modifyCell" stylesheets="@../css/default.css" text="Modify" />
       <MFXButton layoutX="26.0" layoutY="24.0" stylesheets="@../css/default.css" text="Exit" />
    </children>
 </AnchorPane>
