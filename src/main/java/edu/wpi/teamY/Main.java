@@ -9,7 +9,15 @@ public class Main {
     App.launch(App.class, args);
   }
 
-  public static void run(int xCoord, int yCoord, int windowWidth, int windowLength, String cssPath, String destLocationID, String originLocationID) throws IOException {
+  public static void run(
+      int xCoord,
+      int yCoord,
+      int windowWidth,
+      int windowLength,
+      String cssPath,
+      String destLocationID,
+      String originLocationID)
+      throws IOException {
     /*
     Ddb backend = Ddb.getInstance();
     FXMLLoader loader = new FXMLLoader(Main.class.getResource("views/services/InternalTransportation.fxml"));
