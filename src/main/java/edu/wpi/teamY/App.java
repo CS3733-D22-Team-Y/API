@@ -41,7 +41,6 @@ public class App extends Application {
       String temp_cssPath,
       String temp_destLocationID,
       String temp_originLocationID) {
-    System.out.println("Initializing started.");
     xCoord = temp_xCoord;
     yCoord = temp_yCoord;
     windowWidth = temp_windowWidth;
@@ -49,7 +48,6 @@ public class App extends Application {
     cssPath = temp_cssPath;
     destLocationID = temp_destLocationID;
     originLocationID = temp_originLocationID;
-    System.out.println("Initializing complete.");
   }
 
   public static String getDestLocationID() {
@@ -76,8 +74,6 @@ public class App extends Application {
   @Override
   public void start(Stage primaryStage) throws IOException {
 
-    System.out.println("Xcoord: " + xCoord);
-
     primaryStage.setX(xCoord);
     primaryStage.setY(yCoord);
     primaryStage.setWidth(windowWidth);
@@ -91,10 +87,9 @@ public class App extends Application {
     scene
         .getStylesheets()
         .add((Objects.requireNonNull(Main.class.getResource(cssPath))).toExternalForm());
-    Stage stage = new Stage();
     scene.getStylesheets().add(App.class.getResource(cssPath).toExternalForm());
-    stage.setScene(scene);
-    stage.show();
+    primaryStage.setScene(scene);
+    primaryStage.show();
   }
 
   @Override
