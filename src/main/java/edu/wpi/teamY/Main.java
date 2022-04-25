@@ -5,6 +5,10 @@ public class Main {
     CSVRW.loadFromCSV(EntryType.LOCATION);
     CSVRW.loadFromCSV(EntryType.EMPLOYEE);
     // DBManager.save(new SecurityService("0", "0", "0", "0", "0"));
-    App.launch(App.class, args);
+    run();
+  }
+
+  public static void run() {
+    App.launch(App.class);
   }
 }
