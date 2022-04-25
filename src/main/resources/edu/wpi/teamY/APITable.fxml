@@ -15,7 +15,7 @@
    <children>
       <Pane fx:id="pane1" layoutX="14.0" layoutY="24.0">
          <children>
-            <TableView layoutX="191.0" prefHeight="350.0" prefWidth="378.0" stylesheets="@default.css">
+            <TableView fx:id="tableView" layoutX="191.0" prefHeight="350.0" prefWidth="378.0" stylesheets="@default.css">
                <columns>
                   <TableColumn fx:id="location" prefWidth="75.0" text="Location" />
                   <TableColumn fx:id="priority" prefWidth="75.0" text="Priority" />
