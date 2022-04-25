@@ -4,12 +4,12 @@ import com.jfoenix.controls.JFXComboBox;
 import edu.wpi.teamY.Model.Location;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import javafx.fxml.FXML;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javax.swing.*;
-import javax.swing.text.TableView;
 
 public class APITableController {
   @FXML private TextField locationField;
@@ -24,7 +24,7 @@ public class APITableController {
 
   @FXML private MFXButton deleteButton;
   @FXML private MFXButton modifyButton;
-  @FXML private TableView tableView;
+  @FXML private TableView<Location> tableView;
   @FXML private Pane pane1;
   @FXML private Pane pane2;
 
