@@ -22,7 +22,25 @@ public class App extends Application {
   private static String destLocationID;
   private static String originLocationID;
 
-  public static void initialize(int temp_xCoord, int temp_yCoord, int temp_windowWidth, int temp_windowHeight, String temp_cssPath, String temp_destLocationID, String temp_originLocationID) {
+  /**
+   * Initializes the paramaters that specify the properties of the window.
+   * @param temp_xCoord The x-coordinate the window will be located at.
+   * @param temp_yCoord The y-coordinate the window will be located at.
+   * @param temp_windowWidth The desired width of the window. -1 will give the preferred width.
+   * @param temp_windowHeight The desired height of the window. -1 will give the preferred height.
+   * @param temp_cssPath The path to the CSS file to style the window.
+   * @param temp_destLocationID The path the destination location ID (idk what this is).
+   * @param temp_originLocationID The path the origin location ID (idk what this is).
+   */
+  public static void initialize(
+      int temp_xCoord,
+      int temp_yCoord,
+      int temp_windowWidth,
+      int temp_windowHeight,
+      String temp_cssPath,
+      String temp_destLocationID,
+      String temp_originLocationID) {
+    System.out.println("Initializing started.");
     xCoord = temp_xCoord;
     yCoord = temp_yCoord;
     windowWidth = temp_windowWidth;
@@ -30,6 +48,7 @@ public class App extends Application {
     cssPath = temp_cssPath;
     destLocationID = temp_destLocationID;
     originLocationID = temp_originLocationID;
+    System.out.println("Initializing complete.");
   }
 
   // changes active scene
@@ -51,6 +70,8 @@ public class App extends Application {
 
   @Override
   public void start(Stage primaryStage) throws IOException {
+
+    System.out.println("Xcoord: " + xCoord);
 
     primaryStage.setX(xCoord);
     primaryStage.setY(yCoord);

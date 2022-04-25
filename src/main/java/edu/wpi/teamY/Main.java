@@ -7,14 +7,24 @@ public class Main {
     CSVRW.loadFromCSV(EntryType.LOCATION);
     CSVRW.loadFromCSV(EntryType.EMPLOYEE);
     // DBManager.save(new SecurityService("0", "0", "0", "0", "0"));
-    run();
+    run(200, 200, 400, 400, "", "", "");
   }
 
   public static void run() {
     App.launch(App.class);
   }
 
-  public static void run(int xCoord, int yCoord, int windowWidth, int windowLength, String cssPath, String destLocationID, String originLocationID) throws ServiceException {
+  public static void run(
+      int xCoord,
+      int yCoord,
+      int windowWidth,
+      int windowLength,
+      String cssPath,
+      String destLocationID,
+      String originLocationID)
+      throws ServiceException {
+    App.initialize(
+        xCoord, yCoord, windowWidth, windowLength, cssPath, destLocationID, originLocationID);
     App.launch(App.class);
   }
 }
