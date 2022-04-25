@@ -50,9 +50,10 @@
             <TextField fx:id="locationField" layoutX="360.0" layoutY="50.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
             <TextField fx:id="employeeField" layoutX="360.0" layoutY="200.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
             <TextArea fx:id="notesField" layoutX="360.0" layoutY="250.0" prefHeight="63.0" prefWidth="160.0" stylesheets="@default.css" />
-            <MFXButton fx:id="addRequest" layoutX="29.0" layoutY="342.0" onAction="#addValues" stylesheets="@default.css" text="Add" />
+            <MFXButton fx:id="addRequest" layoutX="30.0" layoutY="300.0" onAction="#addValues" stylesheets="@default.css" text="Submit" />
             <JFXComboBox fx:id="priorityPick" layoutX="360.0" layoutY="100.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
             <JFXComboBox fx:id="statusPick" layoutX="360.0" layoutY="150.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
+            <MFXButton fx:id="cancelButton" layoutX="30.0" layoutY="340.0" onAction="#cancel" stylesheets="@default.css" text="Cancel" />
          </children>
       </Pane>
    </children>

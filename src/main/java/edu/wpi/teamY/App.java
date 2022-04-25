@@ -52,6 +52,10 @@ public class App extends Application {
     System.out.println("Initializing complete.");
   }
 
+  public static String getDestLocationID() {
+    return destLocationID;
+  }
+
   // changes active scene
   public void setScene(Scene scene) {
     primaryStage.setScene(scene);

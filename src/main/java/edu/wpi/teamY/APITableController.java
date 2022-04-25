@@ -32,6 +32,7 @@ public class APITableController {
   @FXML private TableView<SecurityService> tableView;
   @FXML private Pane pane1;
   @FXML private Pane pane2;
+  @FXML private MFXButton cancelButton;
 
   @FXML
   public void initialize() {
@@ -89,6 +90,8 @@ public class APITableController {
 
   @FXML
   public void addNewButton() {
+
+    locationField.setText(App.getDestLocationID());
     pane1.setVisible(false);
     pane2.setVisible(true);
   }
@@ -99,6 +102,21 @@ public class APITableController {
     Stage stage = (Stage) exitButton.getScene().getWindow();
     // do what you have to do
     stage.close();
+  }
+
+  @FXML
+  public void cancel() {
+    pane1.setVisible(true);
+    pane2.setVisible(false);
+    clearValues();
+  }
+
+  private void clearValues() {
+    locationField.setText("");
+    priorityPick.setValue("");
+    statusPick.setValue("");
+    employeeField.setText("");
+    notesField.setText("");
   }
 
   @FXML
@@ -120,5 +138,6 @@ public class APITableController {
 
     pane1.setVisible(true);
     pane2.setVisible(false);
+    clearValues();
   }
 }

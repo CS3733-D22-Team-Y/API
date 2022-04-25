@@ -42,5 +42,6 @@
       <MFXButton fx:id="addRequest" layoutX="29.0" layoutY="342.0" onAction="#addValues" stylesheets="@default.css" text="Add" />
       <JFXComboBox fx:id="priorityPick" layoutX="360.0" layoutY="100.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
       <JFXComboBox fx:id="statusPick" layoutX="360.0" layoutY="150.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
+      <MFXButton fx:id="cancelButton" layoutX="82.0" layoutY="342.0" onAction="#cancel" stylesheets="@default.css" text="Cancel" />
    </children>
 </AnchorPane>
