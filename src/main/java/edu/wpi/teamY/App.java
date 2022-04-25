@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.util.Objects;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 
@@ -23,7 +23,7 @@ public class App extends Application {
   private static String originLocationID;
 
   /**
-   * Initializes the paramaters that specify the properties of the window.
+   * Initializes the parameters that specify the properties of the window.
    *
    * @param temp_xCoord The x-coordinate the window will be located at.
    * @param temp_yCoord The y-coordinate the window will be located at.
@@ -79,12 +79,18 @@ public class App extends Application {
     primaryStage.setWidth(windowWidth);
     primaryStage.setHeight(windowHeight);
 
-    // run(1, 1, 1, 1, "", " ", "");
-    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("APITable.fxml")));
-    Scene scene = new Scene(root);
+    FXMLLoader loader =
+        new FXMLLoader(Objects.requireNonNull(Main.class.getResource("APITable.fxml")));
+    AnchorPane mainScene = loader.load();
+    Scene scene = new Scene(mainScene, windowWidth, windowHeight);
 
-    primaryStage.setScene(scene);
-    primaryStage.show();
+    scene
+        .getStylesheets()
+        .add((Objects.requireNonNull(Main.class.getResource(cssPath))).toExternalForm());
+    Stage stage = new Stage();
+    scene.getStylesheets().add(App.class.getResource(cssPath).toExternalForm());
+    stage.setScene(scene);
+    stage.show();
   }
 
   @Override
