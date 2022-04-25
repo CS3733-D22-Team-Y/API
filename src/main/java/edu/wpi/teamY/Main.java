@@ -7,7 +7,7 @@ public class Main {
     // CSVRW.loadFromCSV(EntryType.LOCATION);
     // CSVRW.loadFromCSV(EntryType.EMPLOYEE);
     // DBManager.save(new SecurityService("0", "0", "0", "0", "0"));
-    run(200, 200, 600, 400, "", "Bruh Estates", "");
+    run(100, 100, 620, 450, "", "Bruh Estates", "");
   }
 
   public static void run(
