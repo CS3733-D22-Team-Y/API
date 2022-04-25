@@ -2,8 +2,9 @@ package edu.wpi.teamY;
 
 import com.jfoenix.controls.JFXComboBox;
 import io.github.palexdev.materialfx.controls.MFXButton;
-import java.awt.*;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class APIController {
@@ -13,7 +14,7 @@ public class APIController {
   @FXML private JFXComboBox priorityPick;
   @FXML private JFXComboBox statusPick;
   @FXML private TextField employeeField;
-  @FXML private TextField notesField;
+  @FXML private TextArea notesField;
 
   @FXML
   public void addValues() {

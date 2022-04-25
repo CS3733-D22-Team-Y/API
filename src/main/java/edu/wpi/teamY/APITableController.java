@@ -7,8 +7,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
 import javafx.stage.Stage;
 import javax.swing.*;
 import javax.swing.text.TableView;
@@ -19,23 +19,23 @@ public class APITableController {
   @FXML private MFXButton deleteButton;
   @FXML private MFXButton modifyButton;
   @FXML private TableView tableView;
-
-  @FXML TableColumn<String, String> location = new TableColumn<>();
-  @FXML TableColumn<String, String> priority = new TableColumn<>();
-  @FXML TableColumn<String, String> status = new TableColumn<>();
-  @FXML TableColumn<String, String> employee = new TableColumn<>();
-  @FXML TableColumn<String, String> notes = new TableColumn<>();
-
+  /*
+    @FXML TableColumn<String, String> location = new TableColumn<>();
+    @FXML TableColumn<String, String> priority = new TableColumn<>();
+    @FXML TableColumn<String, String> status = new TableColumn<>();
+    @FXML TableColumn<String, String> employee = new TableColumn<>();
+    @FXML TableColumn<String, String> notes = new TableColumn<>();
+  */
   @FXML
   public void addNewButton() {
     try {
-      FXMLLoader fxmlLoader = new FXMLLoader();
-      FXMLLoader.load(Objects.requireNonNull(getClass().getResource("API.fxml")));
+
+      Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("API.fxml")));
       /*
        * if "fx:controller" is not set in fxml
        * fxmlLoader.setController(NewWindowController);
        */
-      Scene scene = new Scene(fxmlLoader.load(), 630, 400);
+      Scene scene = new Scene(root);
       Stage stage = new Stage();
       stage.setTitle("New Window");
       stage.setScene(scene);
