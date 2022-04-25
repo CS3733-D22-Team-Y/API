@@ -10,10 +10,6 @@ public class Main {
     run(200, 200, 400, 400, "", "", "");
   }
 
-  public static void run() {
-    App.launch(App.class);
-  }
-
   public static void run(
       int xCoord,
       int yCoord,
