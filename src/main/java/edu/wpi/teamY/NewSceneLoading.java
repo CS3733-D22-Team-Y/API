@@ -1,31 +1,16 @@
 package edu.wpi.teamY;
 
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Objects;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Objects;
-
 public class NewSceneLoading {
   // Hashmap of scenes, key: path, content: scene
   private static final HashMap<String, Scene> allScenes = new HashMap<>();
-  private static AnchorPane sidebar;
-  private static SideBarController sidebarController;
-
-  static {
-    try {
-      FXMLLoader loader = new FXMLLoader(App.class.getResource("views/SideBar.fxml"));
-      sidebar = loader.load();
-      sidebarController = loader.getController();
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
-
-  public static SideBarController sideBarController;
 
   // Function to load scene
   public static void addScene(String path) throws IOException {
@@ -58,23 +43,17 @@ public class NewSceneLoading {
 
   public static void loadScene(String path) {
     Scene currScene = allScenes.get(path);
-    try {
-      addSidebarHelper(currScene);
-    } catch (IllegalArgumentException | IOException ignored) {
-    }
+
     App.getInstance().setScene(currScene);
   }
 
   public static void loadSidebar(AnchorPane sidebarPane) throws IOException {
     sidebarPane.getChildren().clear();
-    sidebarPane.getChildren().add(sidebar);
   }
 
   private static void addSidebarHelper(Scene currScene) throws IOException {
     if (currScene.lookup("#sidebarPane") != null) {
       AnchorPane mainPane = (AnchorPane) currScene.lookup("#sidebarPane");
-      mainPane.getChildren().add(sidebar);
-      sidebarController.initializeScale(currScene);
     }
   }
 }

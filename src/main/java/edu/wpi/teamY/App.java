@@ -12,6 +12,20 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class App extends Application {
 
+  public static Stage primaryStage;
+
+  // changes active scene
+  public void setScene(Scene scene) {
+    primaryStage.setScene(scene);
+  }
+
+  private static App instance;
+
+  // Summons instances for scene change implementation
+  public static App getInstance() {
+    return instance;
+  }
+
   @Override
   public void init() {
     log.info("Starting Up");
@@ -21,6 +35,8 @@ public class App extends Application {
   public void start(Stage primaryStage) throws IOException {
     Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("APITable.fxml")));
     Scene scene = new Scene(root);
+
+    primaryStage.setScene(scene);
     primaryStage.show();
   }
 
