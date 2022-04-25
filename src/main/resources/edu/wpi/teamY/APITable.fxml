@@ -19,40 +19,40 @@
             <MFXButton fx:id="exitButton" layoutX="12.0" onAction="#exit" stylesheets="@default.css" text="Exit" />
          </children>
       </Pane>
-      <Pane fx:id="pane2" layoutX="24.0" layoutY="24.0" visible="false">
+      <Pane fx:id="pane2" layoutX="24.0" layoutY="24.0" prefHeight="400.0" prefWidth="600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <MFXButton fx:id="exitButton1" onAction="#exit" prefHeight="27.0" prefWidth="68.0" stylesheets="@default.css" text="Exit" />
-            <Label layoutX="142.0" layoutY="1.0" prefHeight="29.0" prefWidth="128.0" stylesheets="@default.css" text="Location ID">
+            <MFXButton fx:id="exitButton1" layoutX="14.0" layoutY="36.0" onAction="#exit" prefHeight="27.0" prefWidth="68.0" stylesheets="@default.css" text="Exit" />
+            <Label layoutX="150.0" layoutY="45.0" prefHeight="29.0" prefWidth="128.0" stylesheets="@default.css" text="Location ID">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="142.0" layoutY="40.0" stylesheets="@default.css" text="Priority">
+            <Label layoutX="150.0" layoutY="95.0" stylesheets="@default.css" text="Priority">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="142.0" layoutY="76.0" stylesheets="@default.css" text="Status">
+            <Label layoutX="150.0" layoutY="145.0" stylesheets="@default.css" text="Status">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="142.0" layoutY="111.0" stylesheets="@default.css" text="Assigned Employee">
+            <Label layoutX="150.0" layoutY="195.0" stylesheets="@default.css" text="Assigned Employee">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="142.0" layoutY="155.0" stylesheets="@default.css" text="Additional Notes">
+            <Label layoutX="150.0" layoutY="245.0" stylesheets="@default.css" text="Additional Notes">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="locationField" layoutX="344.0" layoutY="3.0" stylesheets="@default.css" />
-            <TextField fx:id="employeeField" layoutX="344.0" layoutY="117.0" stylesheets="@default.css" />
-            <TextArea fx:id="notesField" layoutX="341.0" layoutY="155.0" prefHeight="63.0" prefWidth="160.0" stylesheets="@default.css" />
-            <MFXButton fx:id="addButton1" layoutX="14.0" layoutY="202.0" onAction="#addValues" stylesheets="@default.css" text="Add" />
-            <JFXComboBox fx:id="priorityPick" layoutX="344.0" layoutY="42.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
-            <JFXComboBox fx:id="statusPick" layoutX="344.0" layoutY="78.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
+            <TextField fx:id="locationField" layoutX="360.0" layoutY="50.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
+            <TextField fx:id="employeeField" layoutX="360.0" layoutY="200.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
+            <TextArea fx:id="notesField" layoutX="360.0" layoutY="250.0" prefHeight="63.0" prefWidth="160.0" stylesheets="@default.css" />
+            <MFXButton fx:id="addRequest" layoutX="29.0" layoutY="342.0" onAction="#addValues" stylesheets="@default.css" text="Add" />
+            <JFXComboBox fx:id="priorityPick" layoutX="360.0" layoutY="100.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
+            <JFXComboBox fx:id="statusPick" layoutX="360.0" layoutY="150.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
          </children>
       </Pane>
    </children>
