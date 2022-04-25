@@ -19,7 +19,7 @@ public class Main {
       String destLocationID,
       String originLocationID)
       throws IOException {
-    /*
+
     Ddb backend = Ddb.getInstance();
     FXMLLoader loader = new FXMLLoader(Main.class.getResource("views/services/InternalTransportation.fxml"));
     GridPane mainScene = (GridPane)loader.load();
@@ -38,6 +38,6 @@ public class Main {
     stage.setHeight(windowLength);
     stage.show();
 
-     */
+
   }
 }
