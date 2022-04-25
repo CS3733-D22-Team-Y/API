@@ -1,27 +1,21 @@
 package edu.wpi.teamY;
 
+import com.jfoenix.controls.JFXComboBox;
 import edu.wpi.teamY.Model.SecurityService;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
-import com.jfoenix.controls.JFXComboBox;
-import edu.wpi.teamY.Model.Location;
-import io.github.palexdev.materialfx.controls.MFXButton;
-import javafx.fxml.FXML;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javax.swing.*;
@@ -42,16 +36,17 @@ public class APITableController {
   @FXML private TableView<SecurityService> tableView;
   @FXML private Pane pane1;
   @FXML private Pane pane2;
-  /*
-    @FXML TableColumn<String, String> location = new TableColumn<>();
-    @FXML TableColumn<String, String> priority = new TableColumn<>();
-    @FXML TableColumn<String, String> status = new TableColumn<>();
-    @FXML TableColumn<String, String> employee = new TableColumn<>();
-    @FXML TableColumn<String, String> notes = new TableColumn<>();
-  */
 
   @FXML
   public void initialize() {
+
+    priorityPick.getItems().addAll("low", "medium", "high");
+    statusPick.getItems().addAll("low", "medium", "high");
+
+    setupTable();
+  }
+
+  public void setupTable() {
     List<SecurityService> securityServiceList;
     try {
       securityServiceList = DBManager.getAll(SecurityService.class);
@@ -90,8 +85,6 @@ public class APITableController {
     }
   }
 
-
-
   @FXML
   public void addNewButton() {
     pane1.setVisible(false);
@@ -120,12 +113,30 @@ public class APITableController {
     stage.close();
   }
 
-  public void addValues() {
+  @FXML
+  public void addValues() throws IOException {
     String loc = locationField.getText();
+    priorityPick.getValue();
     statusPick.getValue();
     employeeField.getText();
     notesField.getText();
-    DBManager.save(new Location(loc, 0, 0, "2", "building", "nodeType", "longName", "shortName"));
-    DBManager.save(priorityPick);
+    DBManager.save(
+        new SecurityService(
+            locationField.getText(),
+            (String) priorityPick.getValue(),
+            (String) statusPick.getValue(),
+            employeeField.getText(),
+            notesField.getText()));
+
+    setupTable();
+
+    pane1.setVisible(true);
+    pane2.setVisible(false);
+  }
+
+  public static void reloadScene(String pathToReload) throws IOException {
+    Parent root = FXMLLoader.load(Objects.requireNonNull(App.class.getResource(pathToReload)));
+    Scene scene = new Scene(root);
+    App.getInstance().setScene(scene);
   }
 }
