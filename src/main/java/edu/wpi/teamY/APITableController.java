@@ -15,15 +15,33 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import com.jfoenix.controls.JFXComboBox;
+import edu.wpi.teamY.Model.Location;
+import io.github.palexdev.materialfx.controls.MFXButton;
+import javafx.fxml.FXML;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javax.swing.*;
 
 public class APITableController {
-  @FXML private static MFXButton addButton;
+  @FXML private TextField locationField;
+  @FXML private JFXComboBox priorityPick;
+  @FXML private JFXComboBox statusPick;
+  @FXML private TextField employeeField;
+  @FXML private TextArea notesField;
+  @FXML private MFXButton addButton;
+  @FXML private MFXButton addButton1;
   @FXML private MFXButton exitButton;
+  @FXML private MFXButton exitButton1;
+
   @FXML private MFXButton deleteButton;
   @FXML private MFXButton modifyButton;
   @FXML private TableView<SecurityService> tableView;
+  @FXML private Pane pane1;
+  @FXML private Pane pane2;
   /*
     @FXML TableColumn<String, String> location = new TableColumn<>();
     @FXML TableColumn<String, String> priority = new TableColumn<>();
@@ -72,24 +90,12 @@ public class APITableController {
     }
   }
 
+
+
   @FXML
   public void addNewButton() {
-    try {
-
-      Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("API.fxml")));
-      /*
-       * if "fx:controller" is not set in fxml
-       * fxmlLoader.setController(NewWindowController);
-       */
-      Scene scene = new Scene(root);
-      // Stage stage = new Stage();
-      // stage.setTitle("New Window");
-      // stage.setScene(scene);
-      // stage.show();
-    } catch (IOException e) {
-      Logger logger = Logger.getLogger(getClass().getName());
-      logger.log(Level.SEVERE, "Failed to create new Window.", e);
-    }
+    pane1.setVisible(false);
+    pane2.setVisible(true);
   }
 
   @FXML
@@ -112,5 +118,14 @@ public class APITableController {
     Stage stage = (Stage) deleteButton.getScene().getWindow();
     // do what you have to do
     stage.close();
+  }
+
+  public void addValues() {
+    String loc = locationField.getText();
+    statusPick.getValue();
+    employeeField.getText();
+    notesField.getText();
+    DBManager.save(new Location(loc, 0, 0, "2", "building", "nodeType", "longName", "shortName"));
+    DBManager.save(priorityPick);
   }
 }

@@ -1,24 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@default.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.teamY.APITableController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@default.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.teamY.APITableController">
    <children>
-      <TableView fx:id="tableView" layoutX="205.0" layoutY="24.0" prefHeight="350.0" prefWidth="378.0" stylesheets="@default.css">
-         <columns>
-            <TableColumn fx:id="location" prefWidth="75.0" text="Location" />
-            <TableColumn fx:id="priority" prefWidth="75.0" text="Priority" />
-            <TableColumn fx:id="status" prefWidth="75.0" text="Status" />
-            <TableColumn fx:id="employee" prefWidth="75.0" text="Employee" />
-            <TableColumn fx:id="notes" prefWidth="75.0" text="Notes" />
-         </columns>
-      </TableView>
-      <MFXButton fx:id="addButton" layoutX="14.0" layoutY="347.0" onAction="#addNewButton" stylesheets="@default.css" text="Add" />
-      <MFXButton fx:id="deleteButton" layoutX="71.0" layoutY="348.0" onAction="#deleteCell" stylesheets="@default.css" text="Delete" />
-      <MFXButton fx:id="modifyButton" layoutX="138.0" layoutY="349.0" onAction="#modifyCell" stylesheets="@default.css" text="Modify" />
-      <MFXButton fx:id="exitButton" layoutX="26.0" layoutY="24.0" onAction="#exit" stylesheets="@default.css" text="Exit" />
+      <Pane fx:id="pane1" layoutX="14.0" layoutY="24.0">
+         <children>
+            <TableView fx:id="tableView" layoutX="191.0" prefHeight="350.0" prefWidth="378.0" stylesheets="@default.css">
+               <columns>
+                  <TableColumn fx:id="location" prefWidth="75.0" text="Location" />
+                  <TableColumn fx:id="priority" prefWidth="75.0" text="Priority" />
+                  <TableColumn fx:id="status" prefWidth="75.0" text="Status" />
+                  <TableColumn fx:id="employee" prefWidth="75.0" text="Employee" />
+                  <TableColumn fx:id="notes" prefWidth="75.0" text="Notes" />
+               </columns>
+            </TableView>
+            <MFXButton fx:id="addButton" layoutY="323.0" onAction="#addNewButton" stylesheets="@default.css" text="Add" />
+            <MFXButton fx:id="deleteButton" layoutX="57.0" layoutY="324.0" onAction="#deleteCell" stylesheets="@default.css" text="Delete" />
+            <MFXButton fx:id="modifyButton" layoutX="124.0" layoutY="325.0" onAction="#modifyCell" stylesheets="@default.css" text="Modify" />
+            <MFXButton fx:id="exitButton" layoutX="12.0" onAction="#exit" stylesheets="@default.css" text="Exit" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane2" layoutX="24.0" layoutY="24.0" visible="false">
+         <children>
+            <MFXButton fx:id="exitButton1" onAction="#exit" prefHeight="27.0" prefWidth="68.0" stylesheets="@default.css" text="Exit" />
+            <Label layoutX="142.0" layoutY="1.0" prefHeight="29.0" prefWidth="128.0" stylesheets="@default.css" text="Location ID">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="142.0" layoutY="40.0" stylesheets="@default.css" text="Priority">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="142.0" layoutY="76.0" stylesheets="@default.css" text="Status">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="142.0" layoutY="111.0" stylesheets="@default.css" text="Assigned Employee">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="142.0" layoutY="155.0" stylesheets="@default.css" text="Additional Notes">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="locationField" layoutX="344.0" layoutY="3.0" stylesheets="@default.css" />
+            <TextField fx:id="employeeField" layoutX="344.0" layoutY="117.0" stylesheets="@default.css" />
+            <TextArea fx:id="notesField" layoutX="341.0" layoutY="155.0" prefHeight="63.0" prefWidth="160.0" stylesheets="@default.css" />
+            <MFXButton fx:id="addButton1" layoutX="14.0" layoutY="202.0" onAction="#addValues" stylesheets="@default.css" text="Add" />
+            <JFXComboBox fx:id="priorityPick" layoutX="344.0" layoutY="42.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
+            <JFXComboBox fx:id="statusPick" layoutX="344.0" layoutY="78.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
