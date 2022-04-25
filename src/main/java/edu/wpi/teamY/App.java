@@ -14,8 +14,23 @@ public class App extends Application {
 
   public static Stage primaryStage;
 
-  public static double windowX;
-  public static double windowY;
+  private static int xCoord;
+  private static int yCoord;
+  private static int windowWidth;
+  private static int windowHeight;
+  private static String cssPath;
+  private static String destLocationID;
+  private static String originLocationID;
+
+  public static void initialize(int temp_xCoord, int temp_yCoord, int temp_windowWidth, int temp_windowHeight, String temp_cssPath, String temp_destLocationID, String temp_originLocationID) {
+    xCoord = temp_xCoord;
+    yCoord = temp_yCoord;
+    windowWidth = temp_windowWidth;
+    windowHeight = temp_windowHeight;
+    cssPath = temp_cssPath;
+    destLocationID = temp_destLocationID;
+    originLocationID = temp_originLocationID;
+  }
 
   // changes active scene
   public void setScene(Scene scene) {
@@ -36,6 +51,11 @@ public class App extends Application {
 
   @Override
   public void start(Stage primaryStage) throws IOException {
+
+    primaryStage.setX(xCoord);
+    primaryStage.setY(yCoord);
+    primaryStage.setWidth(windowWidth);
+    primaryStage.setHeight(windowHeight);
 
     // run(1, 1, 1, 1, "", " ", "");
     Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("APITable.fxml")));
