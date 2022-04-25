@@ -24,6 +24,7 @@ public class App extends Application {
 
   /**
    * Initializes the paramaters that specify the properties of the window.
+   *
    * @param temp_xCoord The x-coordinate the window will be located at.
    * @param temp_yCoord The y-coordinate the window will be located at.
    * @param temp_windowWidth The desired width of the window. -1 will give the preferred width.
