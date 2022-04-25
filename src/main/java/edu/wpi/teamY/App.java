@@ -21,7 +21,6 @@ public class App extends Application {
   public void start(Stage primaryStage) throws IOException {
     Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("APITable.fxml")));
     Scene scene = new Scene(root);
-    primaryStage.setScene(scene);
     primaryStage.show();
   }
 

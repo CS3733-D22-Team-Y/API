@@ -26,6 +26,10 @@ public class APITableController {
     @FXML TableColumn<String, String> employee = new TableColumn<>();
     @FXML TableColumn<String, String> notes = new TableColumn<>();
   */
+
+  @FXML
+  public void initialize() {}
+
   @FXML
   public void addNewButton() {
     try {
@@ -36,10 +40,8 @@ public class APITableController {
        * fxmlLoader.setController(NewWindowController);
        */
       Scene scene = new Scene(root);
-      Stage stage = new Stage();
-      stage.setTitle("New Window");
-      stage.setScene(scene);
-      stage.show();
+
+
     } catch (IOException e) {
       Logger logger = Logger.getLogger(getClass().getName());
       logger.log(Level.SEVERE, "Failed to create new Window.", e);
