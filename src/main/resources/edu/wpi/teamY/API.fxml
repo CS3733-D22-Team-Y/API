@@ -5,12 +5,53 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@default.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.teamY.APIController">
    <children>
-      <MFXButton fx:id="exitButton" layoutX="14.0" layoutY="36.0" onAction="#exit" prefHeight="27.0" prefWidth="68.0" stylesheets="@default.css" text="Exit" />
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: .4;">
+         <image>
+            <Image url="@do-rgb.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle height="400.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-opacity: .8;" width="600.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.42222025286541415">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="290.0" layoutX="133.0" layoutY="38.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="397.0" />
+      <VBox layoutX="4.0" layoutY="36.0" spacing="280.0">
+         <children>
+            <MFXButton fx:id="exitButton" onAction="#exit" prefHeight="27.0" prefWidth="68.0" stylesheets="@default.css" text="Exit" />
+            <MFXButton fx:id="addRequest" onAction="#addValues" stylesheets="@default.css" text="Create" />
+         </children>
+      </VBox>
       <Label layoutX="150.0" layoutY="45.0" prefHeight="29.0" prefWidth="128.0" stylesheets="@default.css" text="Location ID">
          <font>
             <Font size="24.0" />
@@ -39,9 +80,8 @@
       <TextField fx:id="locationField" layoutX="360.0" layoutY="50.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
       <TextField fx:id="employeeField" layoutX="360.0" layoutY="200.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
       <TextArea fx:id="notesField" layoutX="360.0" layoutY="250.0" prefHeight="63.0" prefWidth="160.0" stylesheets="@default.css" />
-      <MFXButton fx:id="addRequest" layoutX="29.0" layoutY="342.0" onAction="#addValues" stylesheets="@default.css" text="Add" />
       <JFXComboBox fx:id="priorityPick" layoutX="360.0" layoutY="100.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
       <JFXComboBox fx:id="statusPick" layoutX="360.0" layoutY="150.0" prefHeight="26.0" prefWidth="160.0" stylesheets="@default.css" />
-      <MFXButton fx:id="cancelButton" layoutX="82.0" layoutY="342.0" onAction="#cancel" stylesheets="@default.css" text="Cancel" />
+      <MFXButton fx:id="cancelButton" layoutX="72.0" layoutY="344.0" onAction="#cancel" stylesheets="@default.css" text="Cancel" />
    </children>
 </AnchorPane>
