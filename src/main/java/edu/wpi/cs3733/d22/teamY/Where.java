@@ -1,4 +1,4 @@
-package edu.wpi.teamY;
+package edu.wpi.cs3733.d22.teamY;
 
 import java.io.Serializable;
 

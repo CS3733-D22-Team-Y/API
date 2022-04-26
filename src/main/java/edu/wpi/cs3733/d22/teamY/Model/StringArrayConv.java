@@ -1,4 +1,4 @@
-package edu.wpi.teamY.Model;
+package edu.wpi.cs3733.d22.teamY.Model;
 
 // Interface for objects that need to be converted to CSV and back by CSVBackup.
 public interface StringArrayConv {

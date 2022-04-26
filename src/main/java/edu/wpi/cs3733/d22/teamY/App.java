@@ -1,4 +1,4 @@
-package edu.wpi.teamY;
+package edu.wpi.cs3733.d22.teamY;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -80,7 +80,7 @@ public class App extends Application {
     primaryStage.setHeight(windowHeight);
 
     FXMLLoader loader =
-        new FXMLLoader(Objects.requireNonNull(Main.class.getResource("APITable.fxml")));
+        new FXMLLoader(Objects.requireNonNull(Main.class.getResource("views/APITable.fxml")));
     AnchorPane mainScene = loader.load();
     Scene scene = new Scene(mainScene, windowWidth, windowHeight);
 

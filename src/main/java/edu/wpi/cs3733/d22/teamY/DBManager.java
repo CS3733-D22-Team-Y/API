@@ -1,6 +1,6 @@
-package edu.wpi.teamY;
+package edu.wpi.cs3733.d22.teamY;
 
-import edu.wpi.teamY.Model.StringArrayConv;
+import edu.wpi.cs3733.d22.teamY.Model.StringArrayConv;
 import java.io.Serializable;
 import java.util.List;
 import org.hibernate.Session;

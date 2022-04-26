@@ -1,4 +1,4 @@
-package edu.wpi.teamY.Model;
+package edu.wpi.cs3733.d22.teamY.Model;
 
 import java.sql.*;
 
