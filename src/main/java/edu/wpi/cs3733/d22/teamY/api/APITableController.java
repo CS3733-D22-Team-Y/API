@@ -1,7 +1,7 @@
-package edu.wpi.cs3733.d22.teamY;
+package edu.wpi.cs3733.d22.teamY.api;
 
 import com.jfoenix.controls.JFXComboBox;
-import edu.wpi.cs3733.d22.teamY.Model.SecurityService;
+import edu.wpi.cs3733.d22.teamY.api.Model.SecurityService;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import java.io.IOException;
 import java.util.Collections;
@@ -14,7 +14,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import javax.swing.*;
 
 public class APITableController {
   @FXML private TextField locationField;

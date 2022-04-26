@@ -1,6 +1,6 @@
-package edu.wpi.cs3733.d22.teamY;
+package edu.wpi.cs3733.d22.teamY.api;
 
-import edu.wpi.cs3733.d22.teamY.Model.StringArrayConv;
+import edu.wpi.cs3733.d22.teamY.api.Model.StringArrayConv;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

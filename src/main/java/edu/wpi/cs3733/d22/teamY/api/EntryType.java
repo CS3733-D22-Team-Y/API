@@ -1,9 +1,9 @@
-package edu.wpi.cs3733.d22.teamY;
+package edu.wpi.cs3733.d22.teamY.api;
 
-import edu.wpi.cs3733.d22.teamY.Model.Employee;
-import edu.wpi.cs3733.d22.teamY.Model.Location;
-import edu.wpi.cs3733.d22.teamY.Model.SecurityService;
-import edu.wpi.cs3733.d22.teamY.Model.StringArrayConv;
+import edu.wpi.cs3733.d22.teamY.api.Model.Employee;
+import edu.wpi.cs3733.d22.teamY.api.Model.Location;
+import edu.wpi.cs3733.d22.teamY.api.Model.SecurityService;
+import edu.wpi.cs3733.d22.teamY.api.Model.StringArrayConv;
 
 public enum EntryType {
 

@@ -19,9 +19,9 @@
         <!--     <property name="hibernate.hbm2ddl.auto">update</property>-->
         <property name="hibernate.hbm2ddl.auto">create-drop</property>
 
-        <mapping class="edu.wpi.cs3733.d22.teamY.Model.Location"/>
-        <mapping class="edu.wpi.cs3733.d22.teamY.Model.SecurityService"/>
-        <mapping class="edu.wpi.cs3733.d22.teamY.Model.Employee"/>
+        <mapping class="edu.wpi.cs3733.d22.teamY.api.Model.Location"/>
+        <mapping class="edu.wpi.cs3733.d22.teamY.api.Model.SecurityService"/>
+        <mapping class="edu.wpi.cs3733.d22.teamY.api.Model.Employee"/>
 
 
     </session-factory>
